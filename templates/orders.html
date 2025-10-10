@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Orders{% endblock %}
+
+{% block content %}
+<h2 class="mb-4 text-info">Orders Dashboard</h2>
+<table class="table table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>Order ID</th>
+      <th>Customer</th>
+      <th>Status</th>
+      <th>Date</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1001</td>
+      <td>Acme Corp</td>
+      <td><span class="badge bg-success">Completed</span></td>
+      <td>2025-10-10</td>
+      <td>$1,200</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

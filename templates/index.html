@@ -1,35 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="https://vanh.co.za/cdn/shop/files/Van_H_logo_91e6170f-52a6-4d92-b76a-2becf76c5c19_600x.png?v=1614295501" alt="VanH Logo" width="40" height="40" class="me-2">
-      <span class="fw-bold">Inventory Management System</span>
-      </a>
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Dashboard{% endblock %}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg-light">
+  <div class="d-flex" id="wrapper">
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="inventory.html">Inventory</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Suppliers</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-        </ul>
-      </div>
+    <!-- Sidebar -->
+    <div class="bg-dark text-white p-3" id="sidebar" style="min-width: 220px; height: 100vh;">
+      <h4 class="text-center mb-4">Inventory</h4>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="/templates/suppliers.html" class="nav-link text-white">Suppliers</a></li>
+        <li class="nav-item mb-2"><a href="/templates/orders.html" class="nav-link text-white">Orders</a></li>
+        <li class="nav-item mb-2"><a href="/templates/reports.html" class="nav-link text-white">Reports</a></li>
+        <li class="nav-item mb-2"><a href="/templates/performance.html" class="nav-link text-white">Performance</a></li>
+        <li class="nav-item mb-2"><a href="/templates/settings.html" class="nav-link text-white">Settings</a></li>
+      </ul>
     </div>
-  </nav>
 
-  <section class="bg-light py-5 text-center">
+    <!-- Page Content Area -->
+    <div class="flex-grow-1">
+      <!-- Top Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-3">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="/">Inventory Dashboard</a>
+          <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/templates/settings.html">Settings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div class="p-4">
+        {% block content %}
+        <section class="bg-light py-5 text-center">
     <div class="container">
       <h1 class="fw-bold mb-3">Welcome to Your Inventory Management System</h1>
       <p class="lead text-muted">Track your stock, manage suppliers, and monitor reports — all in one place.</p>
@@ -44,7 +58,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Manage Inventory</h5>
               <p class="card-text text-muted">Add, edit, or remove items from your stock easily.</p>
-              <a href="inventory.html" class="btn btn-outline-primary">Open Inventory</a>
+              <a href="/templates/inventory.html" class="btn btn-outline-primary">Open Inventory</a>
             </div>
           </div>
         </div>
@@ -53,7 +67,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Manage Suppliers</h5>
               <p class="card-text text-muted">Keep supplier details organized and up to date.</p>
-              <a href="#" class="btn btn-outline-primary">View Suppliers</a>
+              <a href="/templates/suppliers.html" class="btn btn-outline-primary">View Suppliers</a>
             </div>
           </div>
         </div>
@@ -62,7 +76,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Reports</h5>
               <p class="card-text text-muted">Get insights into stock levels, sales, and performance.</p>
-              <a href="#" class="btn btn-outline-primary">View Reports</a>
+              <a href="/templates/reports.html" class="btn btn-outline-primary">View Reports</a>
             </div>
           </div>
         </div>
@@ -71,7 +85,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Orders</h5>
               <p class="card-text text-muted">Track current orders and their status.</p>
-              <a href="#" class="btn btn-outline-primary">View Orders</a>
+              <a href="/templates/orders.html" class="btn btn-outline-primary">View Orders</a>
             </div>
           </div>
         </div>
@@ -80,7 +94,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Performance</h5>
               <p class="card-text text-muted">Get insights into sales and performance.</p>
-              <a href="#" class="btn btn-outline-primary">View Performance</a>
+              <a href="/templates/performance.html" class="btn btn-outline-primary">View Performance</a>
             </div>
           </div>
         </div>
@@ -89,13 +103,18 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Settings</h5>
               <p class="card-text text-muted">Customize your preferences and account settings.</p>
-              <a href="#" class="btn btn-outline-primary">Account Settings</a>
+              <a href="/templates/settings.html" class="btn btn-outline-primary">Account Settings</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
+        {% endblock %}
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

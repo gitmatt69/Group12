@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Performance{% endblock %}
+
+{% block content %}
+<h2 class="mb-4 text-warning">Performance Dashboard</h2>
+<div class="row g-3">
+  <div class="col-md-3">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+        <h6>Average Fulfillment Time</h6>
+        <h3>2.5 days</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+        <h6>Supplier On-Time Rate</h6>
+        <h3>92%</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+        <h6>Orders Completed</h6>
+        <h3>150</h3>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

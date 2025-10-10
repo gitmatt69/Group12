@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Reports{% endblock %}
+
+{% block content %}
+<h2 class="mb-4 text-success">Reports Dashboard</h2>
+<div class="row g-4">
+  <div class="col-md-6">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Monthly Summary</h5>
+        <p class="card-text">Overview of sales and orders for this month.</p>
+        <button class="btn btn-success">View Report</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Stock Report</h5>
+        <p class="card-text">Inventory levels and supplier stock.</p>
+        <button class="btn btn-success">Generate</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
