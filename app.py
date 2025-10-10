@@ -45,19 +45,52 @@ def inventory():
 
 @app.route('/orders')
 def orders():
-    return render_template('orders.html')
+    conn = get_db_connection()
+    orders_list = conn.execute('''
+        SELECT po.po_id, s.supplier_name, po.order_date, po.status, po.expected_delivery_date
+        FROM PurchaseOrders po
+        JOIN Suppliers s ON po.supplier_id = s.supplier_id
+        ORDER BY po.po_id
+    ''').fetchall()
+    conn.close()
+    return render_template('orders.html', orders=orders_list)
+
 
 @app.route('/reports')
 def reports():
-    return render_template('reports.html')
+    conn = get_db_connection()
+    report_data = conn.execute('''
+        SELECT c.category_name, SUM(IFNULL(s.quantity,0)) AS total_stock
+        FROM Categories c
+        LEFT JOIN Items i ON c.category_id = i.category_id
+        LEFT JOIN Stock s ON i.item_id = s.item_id
+        GROUP BY c.category_id
+    ''').fetchall()
+    conn.close()
+    return render_template('reports.html', report_data=report_data)
+
 
 @app.route('/performance')
 def performance():
-    return render_template('performance.html')
+    conn = get_db_connection()
+    performance_data = conn.execute('''
+        SELECT i.item_name, SUM(IFNULL(s.quantity,0)) AS total_stock, i.reorder_level
+        FROM Items i
+        LEFT JOIN Stock s ON i.item_id = s.item_id
+        GROUP BY i.item_id
+        HAVING total_stock < i.reorder_level
+    ''').fetchall()
+    conn.close()
+    return render_template('performance.html', performance_data=performance_data)
+
 
 @app.route('/settings')
 def settings():
-    return render_template('settings.html')
+    conn = get_db_connection()
+    users = conn.execute('SELECT user_id, username, role, email FROM Users').fetchall()
+    conn.close()
+    return render_template('settings.html', users=users)
+
 
 @app.route('/inventory/add', methods=['GET', 'POST'])
 def add_item():
