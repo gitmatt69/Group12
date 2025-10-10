@@ -13,13 +13,19 @@
     </tr>
   </thead>
   <tbody>
+    {% for supplier in suppliers %}
     <tr>
-      <td>1</td>
-      <td>ABC Supplies</td>
-      <td>John Doe</td>
-      <td>abc@example.com</td>
-      <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+      <td>{{ supplier['supplier_id'] }}</td>
+      <td>{{ supplier['supplier_name'] }}</td>
+      <td>{{ supplier['contact_person'] }}</td>
+      <td>{{ supplier['phone'] }}</td>
+      <td>{{ supplier['email'] }}</td>
+      <td>
+        <button class="btn btn-sm btn-primary">Edit</button>
+        <button class="btn btn-sm btn-danger">Delete</button>
+      </td>
     </tr>
+    {% endfor %}
   </tbody>
 </table>
 {% endblock %}

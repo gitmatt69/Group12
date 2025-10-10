@@ -1,6 +1,5 @@
 PRAGMA foreign_keys = ON;
 
-Categories
 CREATE TABLE Categories (
     category_id INTEGER PRIMARY KEY AUTOINCREMENT,
     category_name TEXT NOT NULL,
