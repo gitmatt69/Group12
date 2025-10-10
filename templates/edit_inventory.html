@@ -1,0 +1,45 @@
+{% extends "index.html" %}
+{% block title %}Edit Item{% endblock %}
+
+{% block content %}
+<h2>Edit Item</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" value="{{ item['item_name'] }}" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Description</label>
+        <input type="text" name="description" class="form-control" value="{{ item['description'] }}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Category</label>
+        <select name="category_id" class="form-select" required>
+            {% for category in categories %}
+            <option value="{{ category['category_id'] }}" {% if category['category_id']==item['category_id'] %}selected{% endif %}>
+                {{ category['category_name'] }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Supplier</label>
+        <select name="supplier_id" class="form-select" required>
+            {% for supplier in suppliers %}
+            <option value="{{ supplier['supplier_id'] }}" {% if supplier['supplier_id']==item['supplier_id'] %}selected{% endif %}>
+                {{ supplier['supplier_name'] }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Unit Price</label>
+        <input type="number" step="0.01" name="unit_price" class="form-control" value="{{ item['unit_price'] }}" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Reorder Level</label>
+        <input type="number" name="reorder_level" class="form-control" value="{{ item['reorder_level'] }}" required>
+    </div>
+    <button class="btn btn-primary">Update Item</button>
+</form>
+{% endblock %}
