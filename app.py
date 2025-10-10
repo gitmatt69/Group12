@@ -6,6 +6,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/inventory')
+def inventory():
+    return render_template('inventory.html')
+
 @app.route('/suppliers')
 def suppliers():
     return render_template('suppliers.html')

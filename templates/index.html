@@ -13,11 +13,11 @@
     <div class="bg-dark text-white p-3" id="sidebar" style="min-width: 220px; height: 100vh;">
       <h4 class="text-center mb-4">Inventory</h4>
       <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="/templates/suppliers.html" class="nav-link text-white">Suppliers</a></li>
-        <li class="nav-item mb-2"><a href="/templates/orders.html" class="nav-link text-white">Orders</a></li>
-        <li class="nav-item mb-2"><a href="/templates/reports.html" class="nav-link text-white">Reports</a></li>
-        <li class="nav-item mb-2"><a href="/templates/performance.html" class="nav-link text-white">Performance</a></li>
-        <li class="nav-item mb-2"><a href="/templates/settings.html" class="nav-link text-white">Settings</a></li>
+        <li class="nav-item mb-2"><a href="{{ url_for('suppliers') }}" class="nav-link text-white">Suppliers</a></li>
+        <li class="nav-item mb-2"><a href="{{ url_for('orders') }}" class="nav-link text-white">Orders</a></li>
+        <li class="nav-item mb-2"><a href="{{ url_for('reports') }}" class="nav-link text-white">Reports</a></li>
+        <li class="nav-item mb-2"><a href="{{ url_for('performance') }}" class="nav-link text-white">Performance</a></li>
+        <li class="nav-item mb-2"><a href="{{ url_for('settings') }}" class="nav-link text-white">Settings</a></li>
       </ul>
     </div>
 
@@ -26,11 +26,11 @@
       <!-- Top Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-3">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bold" href="/">Inventory Dashboard</a>
+          <a class="navbar-brand fw-bold" href="{{ url_for('home') }}">Inventory Dashboard</a>
           <div class="collapse navbar-collapse justify-content-end">
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="/templates/settings.html">Settings</a>
+                <a class="nav-link" href="{{ url_for('settings') }}">Settings</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Logout</a>
@@ -58,7 +58,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Manage Inventory</h5>
               <p class="card-text text-muted">Add, edit, or remove items from your stock easily.</p>
-              <a href="/templates/inventory.html" class="btn btn-outline-primary">Open Inventory</a>
+              <a href="{{ url_for('inventory') }}" class="btn btn-outline-primary">Open Inventory</a>
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Manage Suppliers</h5>
               <p class="card-text text-muted">Keep supplier details organized and up to date.</p>
-              <a href="/templates/suppliers.html" class="btn btn-outline-primary">View Suppliers</a>
+              <a href="{{ url_for('suppliers') }}" class="btn btn-outline-primary">View Suppliers</a>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Reports</h5>
               <p class="card-text text-muted">Get insights into stock levels, sales, and performance.</p>
-              <a href="/templates/reports.html" class="btn btn-outline-primary">View Reports</a>
+              <a href="{{ url_for('reports') }}" class="btn btn-outline-primary">View Reports</a>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Orders</h5>
               <p class="card-text text-muted">Track current orders and their status.</p>
-              <a href="/templates/orders.html" class="btn btn-outline-primary">View Orders</a>
+              <a href="{{ url_for('orders') }}" class="btn btn-outline-primary">View Orders</a>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Performance</h5>
               <p class="card-text text-muted">Get insights into sales and performance.</p>
-              <a href="/templates/performance.html" class="btn btn-outline-primary">View Performance</a>
+              <a href="{{ url_for('performance') }}" class="btn btn-outline-primary">View Performance</a>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Settings</h5>
               <p class="card-text text-muted">Customize your preferences and account settings.</p>
-              <a href="/templates/settings.html" class="btn btn-outline-primary">Account Settings</a>
+              <a href="{{ url_for('settings') }}" class="btn btn-outline-primary">Account Settings</a>
             </div>
           </div>
         </div>
