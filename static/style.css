@@ -1,0 +1,32 @@
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background-color: #a8cdf3;
+    color: #212529;
+}
+   
+.navbar.bg-light,
+.navbar.navbar-light.bg-light {
+  background-color: #add8e6 !important;
+}
+
+#sidebar {
+    min-width: 220px;
+}
+#sidebar .nav-link {
+    color: rgba(255,255,255,0.9);
+}
+#sidebar .nav-link:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.03);
+}
+
+
+
+.table thead th {
+    vertical-align: middle;
+}
+.table td, .table th {
+    padding: 0.6rem;
+}
+
