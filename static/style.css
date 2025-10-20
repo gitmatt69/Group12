@@ -4,8 +4,9 @@
     --background-colour: #f8f9fa;
     --text-colour: #212529;
     --nav-text: #06202a;
-    --sidebar-bg: #0d3b4a;
+    --sidebar-bg: blue;
     --sidebar-width: 220px;
+    --navbar-colour: #19beff;
 }
 
 .btn-primary {
@@ -44,7 +45,7 @@ body{
 }
 
 .navbar{
-  background-color: var(--light-blue) !important;
+  background-color: var(--navbar-colour) !important;
   box-shadow: none;
 }
 .navbar .navbar-brand,
