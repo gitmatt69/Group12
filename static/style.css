@@ -3,10 +3,10 @@
     --light-blue: #a8cdf3;
     --background-colour: #f8f9fa;
     --text-colour: #212529;
-    --nav-text: #06202a;
+    --nav-text: #fefefe;
     --sidebar-bg: blue;
-    --sidebar-width: 220px;
-    --navbar-colour: #19beff;
+    --sidebar-width: 160px;
+    --navbar-colour: #050049;
 }
 
 .btn-primary {
