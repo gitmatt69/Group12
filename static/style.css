@@ -1,6 +1,7 @@
 
 :root{
     --light-blue: #a8cdf3;
+    --background-colour: #f8f9fa;
     --text-colour: #212529;
     --nav-text: #06202a;
     --sidebar-bg: #0d3b4a;
@@ -16,7 +17,7 @@
 
 body{
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background-color: var(--light-blue);
+  background-color: var(--background-colour);
   color: var(--text-color);
   margin: 0;
 }

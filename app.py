@@ -13,7 +13,11 @@ def get_db_connection():
     return conn
 
 @app.route('/')
-def home():
+def login():
+    return render_template('login.html')
+
+@app.route('/index', methods=['POST'])
+def index():
     return render_template('index.html')
 
 @app.route('/suppliers')
