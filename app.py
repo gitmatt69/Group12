@@ -12,11 +12,11 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
-@app.route('/')
+@app.route('/login')
 def login():
     return render_template('login.html')
 
-@app.route('/index', methods=['POST'])
+@app.route('/')
 def index():
     return render_template('index.html')
 
