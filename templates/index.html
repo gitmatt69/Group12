@@ -9,7 +9,6 @@
 <body>
   <div class="d-flex" id="wrapper">
 
-    <!-- Sidebar -->
     <div id="sidebar">
       <div class="container w-100 d-flex justify-content-center">
          <a class="navbar-brand" href="#">
@@ -28,9 +27,7 @@
       </ul>
     </div>
 
-    <!-- Page Content Area -->
     <div class="flex-grow-1">
-      <!-- Top Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm px-3">
         <div class="container-fluid">
           <a class="navbar-brand fw-bold" href="{{ url_for('index') }}">Inventory Dashboard</a>
@@ -47,7 +44,6 @@
         </div>
       </nav>
 
-      <!-- Main Content -->
       <div class="p-4">
         {% block content %}
         <section class="bg-light py-5 text-center">
