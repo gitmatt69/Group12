@@ -2,7 +2,12 @@
 This is a repo for a web-based application for a University project.
 
 ## Project Purpose
-The objective and purpose of this project is to construct a Sales and Operations Planning (S&OP) platform for the sports attire brand, VanH, to replace the current manual and paper-based data communication system. This platform will complete operation functions including 
+The objective and purpose of this project is to improve VanH's operational efficeincy by means of improving data commmunication and system visibility. This is achieved by constructing and implementing a web-based Sales and Operations Planning (S&OP) platform for the business to replace the currently used manual, paper-based data communication system. This platform will effectively execute various supply chain management functions such as centralised data communication, optimising order cycle times, comprehensive inventory tracking and improving overall prodcuction quality. (We can stop here, the rest is just expansion)
+
+Centralised data communication will improve day-to-day logistics and manufacturing operations by promoting process transparency to all parties that it may concern and effective communication between employees and managers. Inventory tracking enables inventory visbility which allows VanH to minimise its material handling expenses while sustaining maximum client service levels and avoiding stock-outs. The system highlights supply chain bottlenecks and underutilised proceses that may serve as potential alleviator which reduces the aggregate cycle time of orders. Production quality is improved by granting VanH strict supervision on product standards and enabling the business to study defective products to determine their root causes and take action. 
+
+Once the web-based S&OP platform has been constructed it is enrolled integrated into VanH's operations to replace the current manual paper-based data communication system and thereby improve overall operational efficiency.
+
 ## Database Schema
 ## Entity Realtionship Diagram (ERD)
 ## Running the App
