@@ -20,5 +20,3 @@ Type "python app.py"
 ### Step 6: Open Online 
 Go to http/.........
 
-## Project Purpose
-
