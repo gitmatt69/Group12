@@ -2,7 +2,7 @@
 This is a repo for a web-based application for a University project.
 
 ## Project Purpose
-The objective and purpose of this project is to construct a 
+The objective and purpose of this project is to construct a Sales and Operations Planning (S&OP) platform for the sports attire brand, VanH, to replace the current manual and paper-based data communication system. This platform will complete operation functions including 
 ## Database Schema
 ## Entity Realtionship Diagram (ERD)
 ## Running the App
