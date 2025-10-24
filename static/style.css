@@ -10,8 +10,14 @@
 }
 
 .btn-primary {
-    background-color: var(--light-blue);
+    background-color: blue;
     border-color: var(--light-blue);
+}
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active {
+    background-color: blue;
+    border-color: #7faedc;
 }
 
 * {box-sizing: border-box;}
