@@ -3,10 +3,10 @@
     --light-blue: #a8cdf3;
     --background-colour: #f8f9fa;
     --text-colour: #212529;
-    --nav-text: #fefefe;
-    --sidebar-bg: blue;
-    --sidebar-width: 160px;
-    --navbar-colour: #050049;
+    --nav-text: #000000;
+    /* --sidebar-bg: blue;
+    --sidebar-width: 160px; */
+    --navbar-colour: #ffffff;
 }
 
 .btn-primary {
@@ -23,7 +23,7 @@ body{
   margin: 0; 
 }
 
-#sidebar{
+/* #sidebar{
     width: var(--sidebar-width);
     background: var(--sidebar-bg);
     color: #fff;
@@ -42,7 +42,7 @@ body{
   color: #fff;
   background: rgba(255,255,255,0.04);
   border-radius: 4px;
-}
+} */
 
 .navbar{
   background-color: var(--navbar-colour) !important;
