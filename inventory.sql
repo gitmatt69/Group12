@@ -173,7 +173,12 @@ INSERT INTO Warehouses (warehouse_name, location, capacity) VALUES
 INSERT INTO Items (item_name, description, category_id, supplier_id, unit_price, reorder_level) VALUES
 ('Linen Cloth', 'High-quality linen cloth', 1, 1, 800.00, 10),
 ('Cotton Fabric', 'Soft cotton fabric', 2, 2, 120.00, 5),
-('Zips', 'Stainless Steel zippers', 3, 1, 2.50, 50);
+('Zips', 'Stainless Steel zippers', 3, 1, 2.50, 50),
+('Womens Navy Hyper Jersey', 'High-performance cycling jersey with a navy and lime design.', 2, 2, 1798.00, 10),
+('Womens Purple Hyper Jersey', 'Aerodynamic cycling jersey in purple with reflective accents.', 2, 2, 1798.00, 10),
+('Womens Coupure Jersey', 'Lightweight jersey designed for long-distance comfort.', 2, 2, 1798.00, 10),
+('Pink Nova Jersey', 'Stylish pink jersey with breathable fabric.', 2, 2, 1679.00, 10),
+('Kolisi Songo Jersey', 'Limited edition jersey supporting the Songo charity.', 2, 2, 1999.00, 10);
 
 INSERT INTO Stock (item_id, warehouse_id, quantity) VALUES
 (1, 1, 20),
