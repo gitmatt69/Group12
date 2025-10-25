@@ -37,7 +37,9 @@ body{
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   background-color: var(--background-colour); 
   color: var(--text-color);
-  margin: 0; 
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar{
@@ -58,9 +60,9 @@ html, body {
     margin: 0;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
+#wrapper {
+    flex: 1; 
+    display: flex; 
 }
 
 footer {
