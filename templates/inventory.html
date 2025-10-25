@@ -5,7 +5,55 @@
 {% block content %}
 <div class="container mt-4 p-4">
 <h2 class="mb-4 text">Inventory Overview</h2>
-
+<div class="row mb-4">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label for="searchInput" class="form-label">Search Inventory</label>
+            <div class="input-group">
+              <span class="input-group-text">
+                <i class="bi bi-search"></i>
+              </span>
+              <input type="text" class="form-control" id="searchInput" placeholder="Search by name or description">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="categoryFilter" class="form-label">Category</label>
+            <select class="form-select" id="categoryFilter">
+              <option value="">All Categories</option>
+              <option value="bibs">Cycling Bibs</option>
+              <option value="jerseys">Cycling Jerseys</option>
+              <option value="shorts">Cycling Shorts</option>
+              <option value="gloves">Cycling Gloves</option>
+              <option value="helmets">Cycling Helmets</option>
+              <option value="shoes">Cycling Shoes</option>
+              <option value="accessories">Cycling Accessories</option>
+            </select>                   
+          </div>
+          <div class="col-md-3">
+            <label for="stockFilter" class="form-label">Stock Status</label>
+            <select class="form-select" id="stockFilter">
+              <option value="">All Items</option>
+              <option value="in-stock">In Stock</option>
+              <option value="low-stock">Low Stock</option>
+              <option value="out-of-stock">Out of Stock</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">&nbsp;</label>
+              <div class="d-grid">
+                <button type="button" class="btn btn-outline-primary">
+                    <i class="bi bi-funnel me-1"></i>Filter
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="mb-3">
   <a href="/inventory/add" class="btn btn-primary">Add Item</a>
 </div>
