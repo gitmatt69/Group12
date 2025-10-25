@@ -10,6 +10,9 @@ Once the web-based S&OP platform has been constructed it is enrolled integrated 
 
 ## Database Schema
 ## Entity Realtionship Diagram (ERD)
+![bfb_erd](https://github.com/user-attachments/assets/3f3426a5-f8c3-4f88-9ad1-bf38cb00faff)
+
+
 ## Running the App
 The following steps are required to ensure that the constructed inventory management app runs effectively and without any errors.
 ### Step 1: Database
