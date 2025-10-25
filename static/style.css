@@ -19,6 +19,7 @@
   background-repeat: no-repeat;
   min-height: 100vh;
   height: 100%;
+  margin-top: -30px;
 }
 
 .btn-primary {
@@ -46,7 +47,6 @@ body{
 .navbar{
   background-color: var(--navbar-colour) !important;
   box-shadow: none;
-  padding-bottom: 0;
 }
 .navbar .navbar-brand,
 .navbar .nav-link{
@@ -70,6 +70,8 @@ html, body {
 footer {
     margin-top: auto;
 }
+
+
 
 
 /* Sidebar styles - currently not in use 
