@@ -29,7 +29,36 @@ body{
   margin: 0; 
 }
 
-/* #sidebar{
+.navbar{
+  background-color: var(--navbar-colour) !important;
+  box-shadow: none;
+}
+.navbar .navbar-brand,
+.navbar .nav-link{
+  color: var(--nav-text) !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus{
+  color: #042428 !important;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+
+/* Sidebar styles - currently not in use 
+  #sidebar{
     width: var(--sidebar-width);
     background: var(--sidebar-bg);
     color: #fff;
@@ -49,16 +78,3 @@ body{
   background: rgba(255,255,255,0.04);
   border-radius: 4px;
 } */
-
-.navbar{
-  background-color: var(--navbar-colour) !important;
-  box-shadow: none;
-}
-.navbar .navbar-brand,
-.navbar .nav-link{
-  color: var(--nav-text) !important;
-}
-.navbar .nav-link:hover,
-.navbar .nav-link:focus{
-  color: #042428 !important;
-}
