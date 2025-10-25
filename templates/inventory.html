@@ -48,10 +48,10 @@
                     <i class="bi bi-funnel me-1"></i>Filter
                 </button>
               </div>
-          </div>
-        </div>
-      </div>
-    </div>
+           </div>
+         </div>
+       </div>
+     </div>
   </div>
 </div>
 <div class="mb-3">
@@ -84,8 +84,10 @@
         <td>{{ item['reorder_level'] }}</td>
         <td>{{ item['total_stock'] }}</td>
         <td>
-            <a href="/inventory/edit/{{ item['item_id'] }}" class="btn btn-sm btn-primary">Edit</a>
-            <a href="/inventory/delete/{{ item['item_id'] }}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+            <a href="/inventory/edit/{{ item['item_id'] }}" class="btn btn-sm btn-primary">
+                <i class="bi bi-pencil-square"></i></a>
+            <a href="/inventory/delete/{{ item['item_id'] }}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">
+                <i class="bi bi-trash"></i></a>
         </td>
     </tr>
     {% endfor %}
