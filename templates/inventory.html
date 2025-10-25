@@ -3,6 +3,16 @@
 {% block title %}Inventory{% endblock %}
 
 {% block content %}
+{% set category_colors = {
+    'Bibs': 'bg-primary',
+    'Jerseys': 'bg-warning text-dark',
+    'Shorts': 'bg-danger',
+    'Gloves': 'bg-success',
+    'Helmets': 'bg-info text-dark',
+    'Shoes': 'bg-secondary',
+    'Accessories': 'bg-dark'
+} %}
+
 <div class="container mt-4 p-4">
 <h2 class="mb-4 text">
     <i class="bi bi-box-seam"></i> Inventory Overview</h2>
@@ -79,7 +89,7 @@
         <td>{{ item['item_id'] }}</td>
         <td>{{ item['item_name'] }}</td>
         <td>{{ item['description'] }}</td>
-        <td>{{ item['category_name'] }}</td>
+        <td><span class="badge {{ category_colors[item['category_name']] }}">{{ item['category_name'] }}</span></td>
         <td>{{ item['supplier_name'] }}</td>
         <td>{{ item['unit_price'] }}</td>
         <td>{{ item['reorder_level'] }}</td>
