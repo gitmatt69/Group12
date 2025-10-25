@@ -2,6 +2,15 @@
 {% block title %}Reports{% endblock %}
 
 {% block content %}
+{% set category_colors = {
+    'Bibs': 'bg-primary',
+    'Jerseys': 'bg-warning text-dark',
+    'Shorts': 'bg-danger',
+    'Gloves': 'bg-success',
+    'Helmets': 'bg-info text-dark',
+    'Shoes': 'bg-secondary',
+    'Accessories': 'bg-dark'
+} %}
 <div class="container mt-4 p-4">
 <h2 class="mb-4 text">
     <i class="bi bi-graph-up"></i> Reports Dashboard</h2>
@@ -15,7 +24,7 @@
     <tbody>
         {% for row in report_data %}
         <tr>
-            <td>{{ row['category_name'] }}</td>
+            <td><span class="badge {{ category_colors[row['category_name']] }}">{{ row['category_name'] }}</span></td>
             <td>{{ row['total_stock'] }}</td>
         </tr>
         {% endfor %}
