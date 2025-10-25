@@ -84,8 +84,23 @@ def performance():
         GROUP BY i.item_id
         HAVING total_stock < i.reorder_level
     ''').fetchall()
+    
+    sales_summary = conn.execute('''
+        SELECT 
+            so.so_id,
+            c.customer_name,
+            so.order_date,
+            so.status,
+            SUM(sod.quantity_sold) AS total_items,
+            SUM(sod.quantity_sold * sod.unit_price) AS total_value
+        FROM SalesOrders so
+        JOIN Customers c ON so.customer_id = c.customer_id
+        JOIN SalesOrderDetails sod ON so.so_id = sod.so_id
+        GROUP BY so.so_id
+        ORDER BY so.so_id DESC
+    ''').fetchall()
     conn.close()
-    return render_template('performance.html', performance_data=performance_data)
+    return render_template('performance.html', performance_data=performance_data, sales_summary=sales_summary)
 
 
 @app.route('/settings')

@@ -1,4 +1,17 @@
 PRAGMA foreign_keys = ON;
+DROP TABLE IF EXISTS Categories;
+DROP TABLE IF EXISTS Suppliers;
+DROP TABLE IF EXISTS Customers;
+DROP TABLE IF EXISTS Warehouses;
+DROP TABLE IF EXISTS Items;
+DROP TABLE IF EXISTS Stock;
+DROP TABLE IF EXISTS PurchaseOrders;
+DROP TABLE IF EXISTS PurchaseOrderDetails;
+DROP TABLE IF EXISTS SalesOrders;
+DROP TABLE IF EXISTS SalesOrderDetails;
+DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS Transactions;
+
 
 CREATE TABLE Categories (
     category_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -177,11 +190,27 @@ INSERT INTO PurchaseOrderDetails (po_id, item_id, quantity_ordered, unit_cost, q
 
 INSERT INTO SalesOrders (customer_id, order_date, status, shipping_address) VALUES
 (1, '2025-10-03', 'Shipped', '789 Acme Blvd'),
-(2, '2025-10-04', 'Pending', '101 Beta Rd');
+(2, '2025-10-04', 'Pending', '101 Beta Rd'), 
+(1, '2025-10-05', 'Delivered', '789 Acme Blvd'),
+(2, '2025-10-06', 'Cancelled', '101 Beta Rd'),
+(1, '2025-10-07', 'Delivered', '789 Acme Blvd'),
+(2, '2025-10-08', 'Delivered', '101 Beta Rd'),
+(1, '2025-10-09', 'Shipped', '789 Acme Blvd'),
+(2, '2025-10-10', 'Pending', '101 Beta Rd'),
+(1, '2025-10-11', 'Delivered', '789 Acme Blvd'),
+(2, '2025-10-12', 'Cancelled', '101 Beta Rd');
 
 INSERT INTO SalesOrderDetails (so_id, item_id, quantity_sold, unit_price) VALUES
 (1, 1, 2, 850.00),
-(2, 3, 10, 3.00);
+(2, 3, 10, 3.00),
+(3, 1, 5, 850.00),
+(4, 2, 3, 120.00),
+(5, 1, 1, 850.00),
+(6, 2, 3, 120.00),
+(7, 3, 20, 2.50),
+(8, 1, 2, 850.00),
+(9, 3, 5, 2.50),
+(10, 2, 4, 120.00);
 
 INSERT INTO Users (username, password_hash, role, email) VALUES
 ('admin', 'hashedpassword1', 'admin', 'admin@example.com'),
