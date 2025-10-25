@@ -46,6 +46,7 @@ body{
 .navbar{
   background-color: var(--navbar-colour) !important;
   box-shadow: none;
+  padding-bottom: 0;
 }
 .navbar .navbar-brand,
 .navbar .nav-link{

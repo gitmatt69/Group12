@@ -70,102 +70,106 @@
       </nav>
       {% block content %}
       <div class="dashboard-bg">
-        <div class="container my-4">
+        <div class="container my-4 text-center">
           <h1 class="text-white">VanH Inventory Manager</h1>
-          <h2 class="mb-4 text-white">Dashboard</h2>
+          <p class="text-white lead">Effortlessly manage inventory, suppliers, and orders all in one place.</p>
         </div>
-      <div class="container mt-4">
-        <div class="row g-3">
-          <div class="col-12 col-md-6 col-lg-3">
+        <div class="container my-4">
+            <h2 class="mb-4 text-white">
+              <i class="bi bi-house-door"></i> Dashboard</h2>
+          </div>
+        <div class="container mt-4">
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="card shadow-sm p-3">
+              <h6 class="text-muted mb-1">Total Products</h6>
+              <h3 class="fw-bold">120</h3>
+            </div>
+          </div>
+        
+        <div class="col-12 col-md-6 col-lg-3">
             <div class="card shadow-sm p-3">
-             <h6 class="text-muted mb-1">Total Products</h6>
-             <h3 class="fw-bold">120</h3>
-          </div>
-         </div>
-       
-       <div class="col-12 col-md-6 col-lg-3">
-          <div class="card shadow-sm p-3">
-            <h6 class="text-muted mb-1">Total Stock</h6>
-            <h3 class="fw-bold">430 units</h3>
-          </div>
-        </div>
-       <div class="col-12 col-md-6 col-lg-3">
-          <div class="card shadow-sm p-3">
-            <h6 class="text-muted mb-1">Low Stock Items</h6>
-            <h3 class="fw-bold">3 Items</h3>
-          </div>
-       </div>
-       <div class="col-12 col-md-6 col-lg-3">
-          <div class="card shadow-sm p-3">
-            <h6 class="text-muted mb-1">Total Stock Value</h6>
-            <h3 class="fw-bold">R52 000</h3>
-          </div>
-        </div>
-       </div>
-      </div>
-
-
-
-  <section class="py-5">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body"> 
-              <h5 class="card-title fw-bold">Manage Inventory</h5>
-              <p class="card-text text-muted">Add, edit, or remove items from your stock easily.</p>
-              <a href="{{ url_for('inventory') }}" class="btn btn-outline-primary">Open Inventory</a>
+              <h6 class="text-muted mb-1">Total Stock</h6>
+              <h3 class="fw-bold">430 units</h3>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Manage Suppliers</h5>
-              <p class="card-text text-muted">Keep supplier details organized and up to date.</p>
-              <a href="{{ url_for('suppliers') }}" class="btn btn-outline-primary">View Suppliers</a>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card shadow-sm p-3">
+              <h6 class="text-muted mb-1">Low Stock Items</h6>
+              <h3 class="fw-bold">3 Items</h3>
             </div>
-          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Reports</h5>
-              <p class="card-text text-muted">Get insights into stock levels, sales, and performance.</p>
-              <a href="{{ url_for('reports') }}" class="btn btn-outline-primary">View Reports</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Orders</h5>
-              <p class="card-text text-muted">Track current orders and their status.</p>
-              <a href="{{ url_for('orders') }}" class="btn btn-outline-primary">View Orders</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Performance</h5>
-              <p class="card-text text-muted">Get insights into sales and performance.</p>
-              <a href="{{ url_for('performance') }}" class="btn btn-outline-primary">View Performance</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Settings</h5>
-              <p class="card-text text-muted">Customize your preferences and account settings.</p>
-              <a href="{{ url_for('settings') }}" class="btn btn-outline-primary">Account Settings</a>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card shadow-sm p-3">
+              <h6 class="text-muted mb-1">Total Stock Value</h6>
+              <h3 class="fw-bold">R52 000</h3>
             </div>
           </div>
         </div>
       </div>
-    </div>
-        {% endblock %}
+
+
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body"> 
+                <h5 class="card-title fw-bold">Manage Inventory</h5>
+                <p class="card-text text-muted">Add, edit, or remove items from your stock easily.</p>
+                <a href="{{ url_for('inventory') }}" class="btn btn-outline-primary">Open Inventory</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Manage Suppliers</h5>
+                <p class="card-text text-muted">Keep supplier details organized and up to date.</p>
+                <a href="{{ url_for('suppliers') }}" class="btn btn-outline-primary">View Suppliers</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Reports</h5>
+                <p class="card-text text-muted">Get insights into stock levels, sales, and performance.</p>
+                <a href="{{ url_for('reports') }}" class="btn btn-outline-primary">View Reports</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Orders</h5>
+                <p class="card-text text-muted">Track current orders and their status.</p>
+                <a href="{{ url_for('orders') }}" class="btn btn-outline-primary">View Orders</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Performance</h5>
+                <p class="card-text text-muted">Get insights into sales and performance.</p>
+                <a href="{{ url_for('performance') }}" class="btn btn-outline-primary">View Performance</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Settings</h5>
+                <p class="card-text text-muted">Customize your preferences and account settings.</p>
+                <a href="{{ url_for('settings') }}" class="btn btn-outline-primary">Account Settings</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  {% endblock %}
    </div>
   </div>
  </div>
