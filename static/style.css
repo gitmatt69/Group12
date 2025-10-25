@@ -9,6 +9,17 @@
     --navbar-colour: #ffffff;
 }
 
+.background-fade {
+  background: 
+    linear-gradient(to bottom, rgba(255,255,255,0) 75%, #ffffff 100%), 
+    url("../static/Background.jpg") no-repeat center top;
+  
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
 .btn-primary {
     background-color: blue;
     border-color: var(--light-blue);
