@@ -9,10 +9,10 @@
     --navbar-colour: #ffffff;
 }
 
-.background-fade {
+.dashboard-bg {
   background: 
-    linear-gradient(to bottom, rgba(255,255,255,0) 75%, #ffffff 100%), 
-    url("../static/Background.jpg") no-repeat center top;
+    linear-gradient(to bottom, rgba(255,255,255,0) 60%, #ffffff 100%), 
+    url("Background.jpg") no-repeat center top;
   
   background-size: cover;
   background-attachment: fixed;
