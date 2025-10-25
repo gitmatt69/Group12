@@ -2,6 +2,12 @@
 {% block title %}Orders{% endblock %}
 
 {% block content %}
+{% set status_colors = {
+    'Pending': 'bg-warning text-dark',
+    'Shipped': 'bg-primary',
+    'Delivered': 'bg-success',
+    'Cancelled': 'bg-danger',
+} %}
 <div class="container mt-4 p-4">
 <h2 class="mb-4 text">
   <i class="bi bi-bag-check"></i> Orders Dashboard</h2>
@@ -21,7 +27,7 @@
             <td>{{ order['po_id'] }}</td>
             <td>{{ order['supplier_name'] }}</td>
             <td>{{ order['order_date'] }}</td>
-            <td>{{ order['status'] }}</td>
+            <td><span class="badge {{ status_colors[order['status']] }}">{{ order['status'] }}</span></td>
             <td>{{ order['expected_delivery_date'] }}</td>
         </tr>
     {% endfor %}
