@@ -53,8 +53,10 @@ Mac/Linux:
 ```
 source venv/bin/activate
 ```
-To download Flask, type in the terminal: pip install Flask
-
+To download Flask, type in the terminal:
+```
+pip install Flask
+```
 ### Step 3: Initialise the database
 Open the inventory.sql file in VS Code. Then do the following: 
 Press Ctrl Shift P and select the following (Ensure no code is highlighted so all the tables are created and all data is inserted)
