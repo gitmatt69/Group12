@@ -16,15 +16,11 @@ def get_db_connection():
 def login():
     return render_template('login.html')
 
-<<<<<<< HEAD
-@app.route('/index')
-=======
 @app.route('/register')
 def register():
     return render_template('register.html')
 
-@app.route('/')
->>>>>>> 93e5d9b8d6244c8f38dbd4b1392413b154c502b3
+@app.route('/index')
 def index():
     return render_template('index.html')
 
