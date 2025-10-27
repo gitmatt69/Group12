@@ -150,12 +150,12 @@ CREATE TABLE Transactions (
 );
 
 INSERT INTO Categories (category_name, description) VALUES
+('Raw Materials', 'Materials used for manufacturing'),
 ('Bibs', 'Cycling bibs'),
 ('Jerseys', 'Cycling jerseys'),
 ('Shorts', 'Cycling shorts'),
 ('Gloves', 'Cycling gloves'),
 ('Helmets', 'Cycling helmets'),
-('Shoes', 'Cycling shoes'),
 ('Accessories', 'Cycling accessories');
 
 INSERT INTO Suppliers (supplier_name, contact_person, phone, email, address) VALUES
@@ -172,18 +172,23 @@ INSERT INTO Warehouses (warehouse_name, location, capacity) VALUES
 
 INSERT INTO Items (item_name, description, category_id, supplier_id, unit_price, reorder_level) VALUES
 ('Linen Cloth', 'High-quality linen cloth', 1, 1, 800.00, 10),
-('Cotton Fabric', 'Soft cotton fabric', 2, 2, 120.00, 5),
-('Zips', 'Stainless Steel zippers', 3, 1, 2.50, 50),
-('Womens Navy Hyper Jersey', 'High-performance cycling jersey with a navy and lime design.', 2, 2, 1798.00, 10),
-('Womens Purple Hyper Jersey', 'Aerodynamic cycling jersey in purple with reflective accents.', 2, 2, 1798.00, 10),
-('Womens Coupure Jersey', 'Lightweight jersey designed for long-distance comfort.', 2, 2, 1798.00, 10),
-('Pink Nova Jersey', 'Stylish pink jersey with breathable fabric.', 2, 2, 1679.00, 10),
-('Kolisi Songo Jersey', 'Limited edition jersey supporting the Songo charity.', 2, 2, 1999.00, 10);
+('Cotton Fabric', 'Soft cotton fabric', 1, 2, 120.00, 5),
+('Zips', 'Stainless Steel zippers', 1, 1, 2.50, 50),
+('Womens Navy Hyper Jersey', 'High-performance cycling jersey with a navy and lime design.', 3, 2, 1798.00, 10),
+('Womens Purple Hyper Jersey', 'Aerodynamic cycling jersey in purple with reflective accents.', 3, 2, 1798.00, 10),
+('Womens Coupure Shorts', 'Lightweight shorts designed for long-distance comfort.', 4, 2, 1798.00, 10),
+('Pink Nova Gloves', 'Stylish pink gloves with breathable fabric.', 5, 2, 1679.00, 10),
+('Kolisi Songo Jersey', 'Limited edition jersey supporting the Songo charity.', 3, 2, 1999.00, 10);
 
 INSERT INTO Stock (item_id, warehouse_id, quantity) VALUES
 (1, 1, 20),
 (2, 1, 15),
-(3, 2, 200);
+(3, 2, 200),
+(4, 1, 8),
+(5, 1, 12),
+(6, 2, 5),
+(7, 2, 25),
+(8, 1, 10);
 
 INSERT INTO PurchaseOrders (supplier_id, order_date, status, expected_delivery_date) VALUES
 (1, '2025-10-01', 'Pending', '2025-10-10'),

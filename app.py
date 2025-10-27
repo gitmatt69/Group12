@@ -51,9 +51,18 @@ def inventory():
 def orders():
     conn = get_db_connection()
     orders_list = conn.execute('''
-        SELECT po.po_id, s.supplier_name, po.order_date, po.status, po.expected_delivery_date
+        SELECT 
+            po.po_id, 
+            s.supplier_name, 
+            po.order_date, 
+            po.status, 
+            po.expected_delivery_date,
+            i.item_name,
+            pod.quantity_ordered
         FROM PurchaseOrders po
         JOIN Suppliers s ON po.supplier_id = s.supplier_id
+        JOIN PurchaseOrderDetails pod ON po.po_id = pod.po_id
+        JOIN Items i ON pod.item_id = i.item_id
         ORDER BY po.po_id
     ''').fetchall()
     conn.close()
