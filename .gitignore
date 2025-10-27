@@ -6,3 +6,5 @@ instance/
 *.db
 
 .venv
+
+*.db
