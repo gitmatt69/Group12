@@ -3,6 +3,9 @@ This is a repo for a web-based application for a University project for the modu
 
 ## Group members
 Matthew Taylor, u23739772
+Daniël Johannes Voges, u23539519
+Etienne Kros, u23628911
+Chris-Dian Haasbroek, u05017158
 
 ## Project Purpose
 The objective and purpose of this project is to improve VanH's operational efficeincy by means of improving data commmunication and system visibility. This is achieved by constructing and implementing a web-based Sales and Operations Planning (S&OP) platform for the business to replace the currently used manual, paper-based data communication system. This platform will effectively execute various supply chain management functions such as centralised data communication, optimising order cycle times, comprehensive inventory tracking and improving overall prodcuction quality. (We can stop here, the rest is just expansion)
