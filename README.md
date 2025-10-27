@@ -24,26 +24,58 @@ The following steps are required to ensure that the constructed inventory manage
 Please ensure to use Google Chrome to run the app, as we have had issues with Microsoft Edge and our CSS/styling. 
 ### Step 1: Clone the repository
 Open VS Code and do either of the following: 
-Press Ctrl Shift P and the type Git: Clone and select the repo for Group 12. 
+Press Ctrl Shift P and then use the following (Ensure you select Group 12 after typing this)
+```
+Git: Clone
+```
 OR type in a terminal the following: 
+```
 git clone https://github.com/gitmatt69/Group12
 cd Group12
+```
+
 ### Step 2: Create a virtual environment
 Ensure that the latest version of Python is installed. (This is version 3.14.0 at the time of writing)
-Type in a terminal: python -m venv venv
+Type in a terminal:
+```
+python -m venv venv
+```
 Then use one of the folliwng depending on your machine:
-Windows (Command Prompt): venv\Scripts\activate
-Windows (PowerShell): .\venv\Scripts\Activate.ps1
-Mac/Linux: source venv/bin/activate
-
+Windows (Command Prompt):
+``` 
+venv\Scripts\activate
+```
+Windows (PowerShell):
+```
+.\venv\Scripts\Activate.ps1
+```
+Mac/Linux:
+```
+source venv/bin/activate
+```
 To download Flask, type in the terminal: pip install Flask
 
 ### Step 3: Initialise the database
 Open the inventory.sql file in VS Code. Then do the following: 
-Press Ctrl Shift P and type SQLite: Run Query  (Ensure no code is highlighted so all the tables are created and all data is inserted)
+Press Ctrl Shift P and select the following (Ensure no code is highlighted so all the tables are created and all data is inserted)
+```
+SQLite: Run Query
+``` 
 You should now have a working database! 
 ### Step 4: Running the app
-If you created a virtual environment, use the following in a terminal: flask run
-Then the app will open at http://127.0.0.1:5000 (Use Google Chrome) 
-If you did not create a virtual environment, use the following in a terminal: python app.py
-It will open at http://127.0.0.1:5000 (Use Google Chrome) 
+If you created a virtual environment, use the following in a terminal:
+```
+flask run
+```
+Then the app will open at the following (Use Google Chrome) 
+```
+http://127.0.0.1:5000
+```
+If you did not create a virtual environment, use the following in a terminal:
+```
+python app.py
+```
+It will open at the following (Use Google Chrome)
+```
+http://127.0.0.1:5000  
+```
