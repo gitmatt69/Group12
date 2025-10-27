@@ -2,9 +2,9 @@
 This is a repo for a web-based application for a University project for the module BFB 321. This is the submission for the semester project for Group 12.
 
 ## Group members
-Matthew Taylor, u23739772
-Daniël Johannes Voges, u23539519
-Etienne Kros, u23628911
+Matthew Taylor, u23739772  
+Daniël Johannes Voges, u23539519  
+Etienne Kros, u23628911  
 Chris-Dian Haasbroek, u05017158
 
 ## Project Purpose
