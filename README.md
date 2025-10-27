@@ -1,5 +1,5 @@
 # Group 12 Semester Project - Web-Based Supply Chain Application
-This is a repo for a web-based application for a University project for the module BFB 321. This is the submission for the semester project for Group 12.
+This is a repository for a web-based application for the module BFB 321. This is the submission regarding the semester project for Group 12.
 
 ## Group members
 Matthew Taylor, u23739772  
