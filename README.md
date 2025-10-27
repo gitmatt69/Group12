@@ -90,5 +90,5 @@ http://127.0.0.1:5000
 ```
 
 ## Technology Stack
-Front-end: HTML5, CSS and Bootstrap
+Front-end: HTML5, CSS and Bootstrap   
 Back-end: Python (Flask framework) for logic and SQLite for the database. 
