@@ -2,7 +2,10 @@
 This is a repo for a web-based application for a University project for the module BFB 321. This is the submission for the semester project for Group 12.
 
 ## Group members
-Matthew Taylor, u23739772
+Matthew Taylor, u23739772  
+Daniël Johannes Voges, u23539519  
+Etienne Kros, u23628911  
+Chris-Dian Haasbroek, u05017158
 
 ## Project Purpose
 The objective and purpose of this project is to improve VanH's operational efficeincy by means of improving data commmunication and system visibility. This is achieved by constructing and implementing a web-based Sales and Operations Planning (S&OP) platform for the business to replace the currently used manual, paper-based data communication system. This platform will effectively execute various supply chain management functions such as centralised data communication, optimising order cycle times, comprehensive inventory tracking and improving overall prodcuction quality. (We can stop here, the rest is just expansion)
@@ -53,14 +56,20 @@ Mac/Linux:
 ```
 source venv/bin/activate
 ```
-To download Flask, type in the terminal: pip install Flask
-
+To download Flask, type in the terminal:
+```
+pip install Flask
+```
 ### Step 3: Initialise the database
 Open the inventory.sql file in VS Code. Then do the following: 
 Press Ctrl Shift P and select the following (Ensure no code is highlighted so all the tables are created and all data is inserted)
 ```
 SQLite: Run Query
-``` 
+```
+OR open a terminal/command prompt and run the following:
+```
+sqlite3 inventory.db < inventory.sql
+```
 You should now have a working database! 
 ### Step 4: Running the app
 If you created a virtual environment, use the following in a terminal:
