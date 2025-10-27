@@ -8,6 +8,9 @@ Centralised data communication will improve day-to-day logistics and manufacturi
 
 Once the web-based S&OP platform has been constructed it is enrolled integrated into VanH's operations to replace the current manual paper-based data communication system and thereby improve overall operational efficiency.
 
+## File Structure 
+![file_structure](https://github.com/user-attachments/assets/ff9550c1-b3b1-4505-9a64-c07e60c0b79b)
+
 ## Database Schema
 ## Entity Realtionship Diagram (ERD)
 ![bfb_erd](https://github.com/user-attachments/assets/3f3426a5-f8c3-4f88-9ad1-bf38cb00faff)
