@@ -72,7 +72,8 @@ OR open a terminal/command prompt and run the following:
 ```
 sqlite3 inventory.db < inventory.sql
 ```
-You should now have a working database! 
+You should now have a working database!   
+If you do not have a working database, please follow these steps. We discovered during testing that uploading the empty inventory.db file sometimes makes the .sql file run with errors. If this happens, ensure that the web app is closed and delete the inventory.db file. Then, make a new inventory.db file, and run the inventory.sql file again as per the previous steps. You may also need to close and reopen VS Code. 
 ### Step 4: Running the app
 If you created a virtual environment, use the following in a terminal:
 ```
