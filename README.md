@@ -86,7 +86,7 @@ If you created a virtual environment, use the following in a terminal:
 ```
 flask run
 ```
-Then the app will open at the following (Use Google Chrome) 
+Then the app will open at the following __(Use Google Chrome)__ 
 ```
 http://127.0.0.1:5000
 ```
