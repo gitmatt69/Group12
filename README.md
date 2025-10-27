@@ -18,6 +18,8 @@ Once the web-based S&OP platform has been constructed it is enrolled integrated 
 ![file_structure](https://github.com/user-attachments/assets/ff9550c1-b3b1-4505-9a64-c07e60c0b79b)
 
 
+## Database Schema
+The project has tables for customers, sales orders and sales order details to ensure that the end user can track all sales related information in real time. Similarly, there are tables for suppliers, purchase orders and purchase order details. The project also has tables for stock and warehouses to ensure that inventory is tracked accurately. The warehouses table is included to allow for scalability if the company ever opens multiple warehouses or production facilities. The categories table allows the end user to track stock per category, and to easily change categories in the future without needing a lot of extra work in the database. The transactions and users tables are included to allow for tracking who has made what changes to the website, and for user verification (which will only be implemented later in the project, as it was not included in this submission).
 ## Entity Realtionship Diagram (ERD)
 ![bfb_erd](https://github.com/user-attachments/assets/3f3426a5-f8c3-4f88-9ad1-bf38cb00faff)
 
