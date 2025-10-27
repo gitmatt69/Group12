@@ -94,7 +94,7 @@ If you did not create a virtual environment, use the following in a terminal:
 ```
 python app.py
 ```
-It will open at the following (Use Google Chrome)
+It will open at the following __(Use Google Chrome)__
 ```
 http://127.0.0.1:5000  
 ```
