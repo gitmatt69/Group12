@@ -8,11 +8,11 @@ Etienne Kros, u23628911
 Chris-Dian Haasbroek, u05017158
 
 ## Project Purpose
-The objective and purpose of this project is to improve VanH's operational efficeincy by means of improving data commmunication and system visibility. This is achieved by constructing and implementing a web-based Sales and Operations Planning (S&OP) platform for the business to replace the currently used manual, paper-based data communication system. This platform will effectively execute various supply chain management functions such as centralised data communication, optimising order cycle times, comprehensive inventory tracking and improving overall prodcuction quality. 
+The objective and purpose of this project is to improve VanH's operational efficiency by means of improving data commmunication and system visibility. This is achieved by constructing and implementing a web-based Sales and Operations Planning (S&OP) platform for the business to replace their current manual, paper-based data communication system. This platform will effectively execute various supply chain management functions such as centralised data communication, optimising order cycle times, comprehensive inventory tracking and improving overall prodcuction quality. 
 
-Centralised data communication will improve day-to-day logistics and manufacturing operations by promoting process transparency to all parties that it may concern and effective communication between employees and managers. Inventory tracking enables inventory visbility which allows VanH to minimise its material handling expenses while sustaining maximum client service levels and avoiding stock-outs. The system highlights supply chain bottlenecks and underutilised proceses that may serve as potential alleviator which reduces the aggregate cycle time of orders. Production quality is improved by granting VanH strict supervision on product standards and enabling the business to study defective products to determine their root causes and take action. 
+Centralised data communication will improve day-to-day logistics and manufacturing operations by promoting process transparency to all parties that it may concern and effective communication between employees and managers. Inventory tracking enables inventory visbility which allows VanH to minimise its material handling expenses while sustaining maximum client service levels and avoiding stock-outs. The system highlights supply chain bottlenecks and underutilised proceses that may serve as potential alleviators which reduces the aggregate cycle time of orders. This accumulates into greater customer service. Production quality is improved by granting VanH strict supervision on product standards and enabling the business to study defective products to determine their root causes and take action. 
 
-Once the web-based S&OP platform has been constructed it is enrolled integrated into VanH's operations to replace the current manual paper-based data communication system and thereby improve overall operational efficiency.
+Once the web-based S&OP platform has been constructed it is integrated into VanH's operations to replace the current manual paper-based data communication system and thereby improve overall operational efficiency.
 
 ## File Structure 
 ![file_structure](https://github.com/user-attachments/assets/ff9550c1-b3b1-4505-9a64-c07e60c0b79b)
@@ -22,7 +22,13 @@ Once the web-based S&OP platform has been constructed it is enrolled integrated 
 The project has tables for customers, sales orders and sales order details to ensure that the end user can track all sales related information in real time. Similarly, there are tables for suppliers, purchase orders and purchase order details. The project also has tables for stock and warehouses to ensure that inventory is tracked accurately. The warehouses table is included to allow for scalability if the company ever opens multiple warehouses or production facilities. The categories table allows the end user to track stock per category, and to easily change categories in the future without needing a lot of extra work in the database. The transactions and users tables are included to allow for tracking who has made what changes to the website, and for user verification (which will only be implemented later in the project, as it was not included in this submission).
 ## Entity Realtionship Diagram (ERD)
 ![bfb_erd](https://github.com/user-attachments/assets/3f3426a5-f8c3-4f88-9ad1-bf38cb00faff)
-
+## Sample Data
+*__7 Inventory Categories__: Raw Materials, Bibs, Jerseys, Shorts, Gloves, Helmets, Accessories.
+*__2 Suppliers__: TechSupplies Inc. and FurniCo.
+*__2 Customers__: Acme Corp. and Beta LLC.
+*__2 Warehouses__: Main Warehouse and Secondary Warehouse.
+*__8 Items__: Linen Cloth, Cotton Fabric, Zips, Womens Navy Hyper Jersey, Womens Purple Hyper Jersey, Womens Coupure Shorts, Pink Nova Gloves, Kolisi Songo Jersey.  
+We also created two purchase orders linked to their details, and did the same for ten sales orders. Additionally, we inserted two users and three stock movement transactions.
 
 ## Running the App
 The following steps are required to ensure that the constructed inventory management app runs effectively and without any errors.
