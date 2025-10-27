@@ -23,11 +23,12 @@ The project has tables for customers, sales orders and sales order details to en
 ## Entity Realtionship Diagram (ERD)
 ![bfb_erd](https://github.com/user-attachments/assets/3f3426a5-f8c3-4f88-9ad1-bf38cb00faff)
 ## Sample Data
-*__7 Inventory Categories__: Raw Materials, Bibs, Jerseys, Shorts, Gloves, Helmets, Accessories.
-*__2 Suppliers__: TechSupplies Inc. and FurniCo.
-*__2 Customers__: Acme Corp. and Beta LLC.
-*__2 Warehouses__: Main Warehouse and Secondary Warehouse.
-*__8 Items__: Linen Cloth, Cotton Fabric, Zips, Womens Navy Hyper Jersey, Womens Purple Hyper Jersey, Womens Coupure Shorts, Pink Nova Gloves, Kolisi Songo Jersey.  
+- __7 Inventory Categories__: Raw Materials, Bibs, Jerseys, Shorts, Gloves, Helmets, Accessories.  
+- __2 Suppliers__: TechSupplies Inc. and FurniCo.  
+- __2 Customers__: Acme Corp. and Beta LLC.  
+- __2 Warehouses__: Main Warehouse and Secondary Warehouse.  
+- __8 Items__: Linen Cloth, Cotton Fabric, Zips, Womens Navy Hyper Jersey, Womens Purple Hyper Jersey, Womens Coupure Shorts, Pink Nova Gloves, Kolisi Songo Jersey.  
+  
 We also created two purchase orders linked to their details, and did the same for ten sales orders. Additionally, we inserted two users and three stock movement transactions.
 
 ## Running the App
