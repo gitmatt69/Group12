@@ -60,7 +60,11 @@ Open the inventory.sql file in VS Code. Then do the following:
 Press Ctrl Shift P and select the following (Ensure no code is highlighted so all the tables are created and all data is inserted)
 ```
 SQLite: Run Query
-``` 
+```
+OR open a terminal/command prompt and run the following:
+```
+sqlite3 inventory.db < inventory.sql
+```
 You should now have a working database! 
 ### Step 4: Running the app
 If you created a virtual environment, use the following in a terminal:
