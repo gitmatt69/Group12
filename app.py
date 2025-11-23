@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session
+from flask import Flask, render_template, request, redirect, url_for, flash, session, send_file
 import sqlite3
+import matplotlib.pyplot as plt
 from datetime import date
 import os
 DATABASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'inventory.db')
@@ -123,7 +124,7 @@ def inventory():
 
     low_stock_count = sum(
         1 for item in items
-        if (item['total_stock'] or 0) > 0 and (item['total_stock'] or 0) <= (item['reorder_level'] or 0)
+        if (item['total_stock'] or 0) > 0 and (item['total_stock'] or 0) < (item['reorder_level'] or 0)
     )
 
     out_of_stock_count = sum(
@@ -297,7 +298,31 @@ def reports():
         GROUP BY c.category_id
     ''').fetchall()
     conn.close()
-    return render_template('reports.html', report_data=report_data)
+    category_colors = {
+        'Bibs': '#0d6efd',          # bg-primary
+        'Jerseys': '#ffc107',       # bg-warning
+        'Shorts': '#dc3545',        # bg-danger
+        'Gloves': '#198754',        # bg-success
+        'Helmets': '#0dcaf0',       # bg-info
+        'Raw Materials': '#6c757d', # bg-secondary
+        'Accessories': '#212529'    # bg-dark
+    }
+
+    categories = [row['category_name'] for row in report_data]
+    totals = [row['total_stock'] for row in report_data]
+    colors = [category_colors.get(cat, '#0d6efd') for cat in categories]
+
+    plt.figure(figsize=(8,4))
+    bars = plt.bar(categories, totals, color=colors)
+    plt.title('Stock by Category')
+    plt.ylabel('Total Stock')
+    plt.xticks(rotation=30, ha='right')
+
+    chart_path = os.path.join('static', 'reports_stock_chart.png')
+    plt.tight_layout()
+    plt.savefig(chart_path)
+    plt.close()
+    return render_template('reports.html', report_data=report_data, chart_path=chart_path)
 
 @app.route('/sales_orders')
 def sales_orders():
