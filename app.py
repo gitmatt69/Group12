@@ -158,7 +158,7 @@ def inventory():
 @app.route('/orders')
 def orders():
     conn = get_db_connection()
-    orders_list = conn.execute('''
+    orders = conn.execute('''
         SELECT 
             po.po_id, 
             s.supplier_name, 
@@ -173,8 +173,16 @@ def orders():
         JOIN Items i ON pod.item_id = i.item_id
         ORDER BY po.po_id
     ''').fetchall()
+    total_orders = len(orders)
+    pending_orders = sum(1 for o in orders if o['status'] == 'Pending')
+    received_orders = sum(1 for o in orders if o['status'] == 'Received')
+    total_quantity = sum(o['quantity_ordered'] for o in orders)
     conn.close()
-    return render_template('orders.html', orders=orders_list)
+    return render_template('orders.html', orders=orders, 
+                           pending_orders=pending_orders,
+                           received_orders=received_orders,
+                           total_orders=total_orders,
+                           total_quantity=total_quantity)
 
 @app.route('/orders/add', methods=['GET', 'POST'])
 def add_order():

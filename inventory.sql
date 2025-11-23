@@ -192,11 +192,17 @@ INSERT INTO Stock (item_id, warehouse_id, quantity) VALUES
 
 INSERT INTO PurchaseOrders (supplier_id, order_date, status, expected_delivery_date) VALUES
 (1, '2025-10-01', 'Pending', '2025-10-10'),
-(2, '2025-09-25', 'Received', '2025-09-30');
+(2, '2025-09-25', 'Received', '2025-09-30'),
+(1, '2025-10-02', 'Pending', '2025-10-12'),
+(2, '2025-09-28', 'Received', '2025-10-03'),
+(1, '2025-10-03', 'Pending', '2025-10-15');
 
 INSERT INTO PurchaseOrderDetails (po_id, item_id, quantity_ordered, unit_cost, quantity_received) VALUES
 (1, 1, 10, 750.00, 0),
-(2, 2, 5, 110.00, 5);
+(2, 2, 5, 110.00, 5),
+(3, 1, 50, 800.00, 0),
+(4, 3, 100, 2.75, 100),
+(5, 2, 20, 115.00, 0);
 
 INSERT INTO SalesOrders (customer_id, order_date, status, shipping_address) VALUES
 (1, '2025-10-03', 'Shipped', '789 Acme Blvd'),
