@@ -114,6 +114,23 @@ def inventory():
     '''
     items = conn.execute(query, params).fetchall()
 
+    total_inventory_value = sum(
+        (item['unit_price'] or 0) * (item['total_stock'] or 0)
+        for item in items
+    )
+
+    total_units = sum(item['total_stock'] or 0 for item in items)
+
+    low_stock_count = sum(
+        1 for item in items
+        if (item['total_stock'] or 0) > 0 and (item['total_stock'] or 0) <= (item['reorder_level'] or 0)
+    )
+
+    out_of_stock_count = sum(
+        1 for item in items
+        if (item['total_stock'] or 0) == 0
+    )
+
     if stock_filter:
         filtered_items = []
         for item in items:
@@ -128,7 +145,13 @@ def inventory():
         items = filtered_items
 
     conn.close()
-    return render_template('inventory.html', items=items)
+    return render_template('inventory.html',
+                            items=items, 
+                            total_inventory_value=total_inventory_value,
+                            total_units=total_units,
+                            low_stock_count=low_stock_count,
+                            out_of_stock_count=out_of_stock_count
+                            )
 
 
 

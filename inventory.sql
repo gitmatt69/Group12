@@ -223,8 +223,8 @@ INSERT INTO SalesOrderDetails (so_id, item_id, quantity_sold, unit_price) VALUES
 (10, 2, 4, 120.00);
 
 INSERT INTO Users (username, password_hash, role, email) VALUES
-('admin', 'hashedpassword1', 'admin', 'admin@example.com'),
-('user1', 'hashedpassword2', 'staff', 'user1@example.com');
+('admin', 'Hashedpassword1', 'admin', 'admin@example.com'),
+('user1', 'Hashedpassword2', 'staff', 'user1@example.com');
 
 INSERT INTO Transactions (item_id, transaction_type, quantity, reference_id, user_id) VALUES
 (1, 'IN', 10, 1, 1),

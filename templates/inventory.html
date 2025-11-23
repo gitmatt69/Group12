@@ -12,6 +12,45 @@
     'Raw Materials': 'bg-secondary',
     'Accessories': 'bg-dark'
 } %}
+<div class="row mb-4 mt-4">
+
+  <div class="col-md-3">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+        <h6 class="text-muted">Total Inventory Value</h6>
+        <h4>R {{ total_inventory_value }}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+        <h6 class="text-muted">Low Stock Items</h6>
+        <h4>{{ low_stock_count }}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+        <h6 class="text-muted">Out of Stock</h6>
+        <h4>{{ out_of_stock_count }}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+        <h6 class="text-muted">Total Units in Stock</h6>
+        <h4>{{ total_units }}</h4>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 <div class="container mt-4 p-4">
 <h2 class="mb-4 text">
