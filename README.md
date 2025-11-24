@@ -15,8 +15,39 @@ Centralised data communication will improve day-to-day logistics and manufacturi
 Once the web-based S&OP platform has been constructed it is integrated into VanH's operations to replace the current manual paper-based data communication system and thereby improve overall operational efficiency.
 
 ## File Structure 
-![file_structure](https://github.com/user-attachments/assets/ff9550c1-b3b1-4505-9a64-c07e60c0b79b)
-
+```
+├── inventory_app-1/ 
+    ├── static/
+    │   ├── Background.jpg
+    │   ├── logo.png
+    │   ├── reports_stock_chart.png
+    │   └── style.css
+    ├── templates/
+    │   ├── add_inventory.html
+    │   ├── add_order.html
+    │   ├── add_sales_order.html
+    │   ├── add_supplier.html
+    │   ├── add_user.html
+    │   ├── edit_inventory.html
+    │   ├── edit_order.html
+    │   ├── edit_sales_order.html
+    │   ├── edit_supplier.html
+    │   ├── edit_user.html
+    │   ├── index.html
+    │   ├── inventory.html
+    │   ├── login.html
+    │   ├── orders.html
+    │   ├── performance.html
+    │   ├── register.html
+    │   ├── reports.html
+    │   ├── sales_orders.html
+    │   ├── settings.html
+    │   └── suppliers.html
+    ├── app.py
+    ├── inventory.db
+    ├── inventory.sql
+    └── README.md
+```
 
 ## Database Schema
 The project has tables for customers, sales orders and sales order details to ensure that the end user can track all sales related information in real time. Similarly, there are tables for suppliers, purchase orders and purchase order details. The project also has tables for stock and warehouses to ensure that inventory is tracked accurately. The warehouses table is included to allow for scalability if the company ever opens multiple warehouses or production facilities. The categories table allows the end user to track stock per category, and to easily change categories in the future without needing a lot of extra work in the database. The transactions and users tables are included to allow for tracking who has made what changes to the website, and for user verification (which will only be implemented later in the project, as it was not included in this submission).
