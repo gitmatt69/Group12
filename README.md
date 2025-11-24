@@ -4,7 +4,7 @@ This is a repository for a web-based application for the module BFB 321. This is
 ## Group members
 Matthew Taylor, u23739772 (Username: gitmatt69)  
 Daniël Johannes Voges, u23539519 (Username: NielVoges)  
-Etienne Kros, u23628911 (Username: gitet11)
+Etienne Kros, u23628911 (Username: gitet11)  
 Chris-Dian Haasbroek, u05017158 (Username: hasiehaasbroek)
 
 ## Project Purpose
