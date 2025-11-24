@@ -8,31 +8,47 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
+
+<!-- Center page content vertically & horizontally -->
 <body class="bg-light d-flex align-items-center justify-content-center vh-100">
+  
+  <!-- Login card container -->
   <div class="card p-4 shadow rounded-4" style="min-width:350px;">
     <h3 class="text-center mb-4">Login</h3>
-    
+
+    <!-- Display login error if server sends one -->    
     {% if error %}
     <div class="alert alert-danger">{{ error }}</div>
     {% endif %}
 
+    <!-- Login form -->
     <form method="POST" action="/">
+
+      <!-- Username field -->
       <div class="mb-3">
         <label for="username" class="form-label" style="color: #0d6efd;">Username</label>
         <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required />
       </div>
+
+      <!-- Password field with validation rules -->
       <div class="mb-3">
         <label for="password" class="form-label" style="color: #0d6efd;">Password</label>
         <input type="password" class="form-control" id="password" name="password" placeholder="Password" required 
          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" 
          title="Password must be at least 8 characters long, including one uppercase letter, one lowercase letter, and one number."/>
       </div>
+
+      <!-- Submit login button -->
       <button type="submit" class="btn btn-primary w-100">Login</button>
     </form>
+
+    <!-- Link to registration page -->
     <div class="text-center" style="padding-top: 10px;">
       <a href="{{ url_for('register') }}" class="btn btn-outline-primary w-100">Register</a>
     </div>
   </div>
+
+  <!-- Bootstrap JS bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
