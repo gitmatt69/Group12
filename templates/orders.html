@@ -88,6 +88,8 @@
             <!-- Status badge with mapped color -->
             <td><span class="badge {{ status_colors[order['status']] }}">{{ order['status'] }}</span></td>
             <td>{{ order['expected_delivery_date'] }}</td>
+
+            <!-- Edit & delete actions -->
             <td>
               <div class="d-flex gap-1">
                 <a href="/orders/edit/{{ order['po_id'] }}" class="btn btn-sm btn-primary me-1">
