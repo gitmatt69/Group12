@@ -19,8 +19,8 @@ def get_db_connection():
 def login():
     error = None
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
+        username = request.form['username'] # check username
+        password = request.form['password'] # check password
 
         conn = get_db_connection()
         user = conn.execute('SELECT * FROM Users WHERE username = ? AND password_hash = ?', 
@@ -82,7 +82,7 @@ def index():
             GROUP BY i.item_id
             HAVING total_stock < i.reorder_level
         )
-    ''').fetchone()[0]
+    ''').fetchone()[0] 
 
     total_sales = conn.execute('''
     SELECT SUM(sod.quantity_sold * sod.unit_price)
