@@ -67,10 +67,34 @@ def register():
 
 @app.route('/index')
 def index():
+    conn = get_db_connection()
+    
+    total_items = conn.execute('SELECT COUNT(*) FROM Items').fetchone()[0]
+
+    total_stock = conn.execute('SELECT SUM(quantity) FROM Stock').fetchone()[0] or 0
+
+    low_stock = conn.execute('''
+        SELECT COUNT(*) FROM (
+            SELECT i.item_id, SUM(IFNULL(s.quantity,0)) AS total_stock, i.reorder_level
+            FROM Items i
+            LEFT JOIN Stock s ON i.item_id = s.item_id
+            GROUP BY i.item_id
+            HAVING total_stock < i.reorder_level
+        )
+    ''').fetchone()[0]
+
+    total_sales = conn.execute('''
+    SELECT SUM(sod.quantity_sold * sod.unit_price)
+    FROM SalesOrderDetails sod
+''').fetchone()[0] or 0
+    conn.close()
     if 'user_id' not in session:
         flash("Please log in first.", "warning")
         return redirect(url_for('login'))
-    return render_template('index.html')
+    return render_template('index.html', total_items=total_items, 
+                           total_stock=total_stock, 
+                           low_stock=low_stock,
+                           total_sales=total_sales)
 
 @app.route('/suppliers')
 def suppliers():
@@ -347,7 +371,7 @@ def sales_orders():
 @app.route('/performance')
 def performance():
     conn = get_db_connection()
-    performance_data = conn.execute('''
+    low_stock_items = conn.execute('''
         SELECT i.item_name, SUM(IFNULL(s.quantity,0)) AS total_stock, i.reorder_level
         FROM Items i
         LEFT JOIN Stock s ON i.item_id = s.item_id
@@ -370,7 +394,17 @@ def performance():
         ORDER BY so.so_id
     ''').fetchall()
     conn.close()
-    return render_template('performance.html', performance_data=performance_data, sales_summary=sales_summary)
+    total_revenue = sum(row['total_value'] for row in sales_summary)
+    total_items_sold = sum(row['total_items'] for row in sales_summary)
+    total_orders = len(sales_summary)
+    average_order_value = total_revenue / total_orders if total_orders > 0 else 0
+    return render_template('performance.html', low_stock_items=low_stock_items, 
+                           sales_summary=sales_summary,
+                           total_revenue=total_revenue,
+                           total_items_sold=total_items_sold,
+                           total_orders=total_orders, 
+                           average_order_value=average_order_value
+                          )
 
 @app.route('/sales_orders/add', methods=['GET', 'POST'])
 def add_sales_order():

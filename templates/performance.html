@@ -22,7 +22,7 @@
         </tr>
     </thead>
     <tbody>
-        {% for row in performance_data %}
+        {% for row in low_stock_items %}
         <tr>
             <td>{{ row['item_name'] }}</td>
             <td>{{ row['total_stock'] }}</td>
@@ -38,6 +38,45 @@
   <a href="{{ url_for('add_sales_order') }}" class="btn btn-primary">
     <i class="bi bi-plus-circle"></i> Add Sales Order</a>
 </div>
+<div class="row mb-4 mt-4">
+
+  <div class="col-md-3">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+        <h6 class="text-muted">Total Revenue</h6>
+        <h4>R{{ total_revenue | round(2) }}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+        <h6 class="text-muted">Number of Items Sold</h6>
+        <h4>{{ total_items_sold }}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+        <h6 class="text-muted">Total Number of Orders</h6>
+        <h4>{{ total_orders }}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+        <h6 class="text-muted">Average Order Value</h6>
+        <h4>R{{ average_order_value | round(2) }}</h4>
+      </div>
+    </div>
+  </div>
+
+ </div>
 <table class="table table-bordered table-striped mt-3">
     <thead class="table-dark">
         <tr>
