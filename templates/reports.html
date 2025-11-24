@@ -15,7 +15,7 @@
 <h2 class="mb-4 text">
     <i class="bi bi-graph-up"></i> Reports Dashboard</h2>
     <div class="d-flex justify-content-center mb-4">
-        <img src="{{ url_for('static', filename='reports_stock_chart.png') }}" alt="Stock Chart" class="img-fluid">
+        <img src="{{ url_for('static', filename='reports_stock_chart.png') }}?v={{ timestamp }}" alt="Stock Chart" class="img-fluid">
     </div>
 <table class="table table-striped table-hover">
     <thead class="table-dark">

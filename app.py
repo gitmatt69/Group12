@@ -3,6 +3,7 @@ import sqlite3
 import matplotlib.pyplot as plt
 from datetime import date
 import os
+import matplotlib.patches as patches
 DATABASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'inventory.db')
 
 app = Flask(__name__)
@@ -311,6 +312,8 @@ def delete_order(po_id):
     flash("Purchase order deleted successfully!", "success")
     return redirect(url_for('orders'))
 
+from datetime import datetime
+
 @app.route('/reports')
 def reports():
     conn = get_db_connection()
@@ -322,31 +325,42 @@ def reports():
         GROUP BY c.category_id
     ''').fetchall()
     conn.close()
+
     category_colors = {
-        'Bibs': '#0d6efd',          # bg-primary
-        'Jerseys': '#ffc107',       # bg-warning
-        'Shorts': '#dc3545',        # bg-danger
-        'Gloves': '#198754',        # bg-success
-        'Helmets': '#0dcaf0',       # bg-info
-        'Raw Materials': '#6c757d', # bg-secondary
-        'Accessories': '#212529'    # bg-dark
+        'Bibs': '#0d6efd',
+        'Jerseys': '#ffc107',
+        'Shorts': '#dc3545',
+        'Gloves': '#198754',
+        'Helmets': '#0dcaf0',
+        'Raw Materials': '#6c757d',
+        'Accessories': '#212529'
     }
 
     categories = [row['category_name'] for row in report_data]
     totals = [row['total_stock'] for row in report_data]
-    colors = [category_colors.get(cat, '#0d6efd') for cat in categories]
+    colors = [category_colors.get(cat, '#89CFF0') for cat in categories]
 
-    plt.figure(figsize=(8,4))
-    bars = plt.bar(categories, totals, color=colors)
-    plt.title('Stock by Category')
-    plt.ylabel('Total Stock')
-    plt.xticks(rotation=30, ha='right')
+    fig, ax = plt.subplots(figsize=(10, 5))
+    ax.barh(categories, totals, color=colors, edgecolor='black', height=0.6)
+
+    for i, val in enumerate(totals):
+        ax.text(val + 0.5, i, str(val), va='center', fontsize=10, fontweight='bold', color='#333')
+
+    ax.set_xlabel('Total Stock', fontsize=12, fontweight='bold')
+    ax.set_ylabel('Category', fontsize=12, fontweight='bold')
+    ax.set_title('Stock by Category', fontsize=14, fontweight='bold', pad=15)
+    ax.grid(axis='x', linestyle='--', alpha=0.5)
+    ax.set_axisbelow(True)
+
+    plt.tight_layout()
 
     chart_path = os.path.join('static', 'reports_stock_chart.png')
-    plt.tight_layout()
     plt.savefig(chart_path)
     plt.close()
-    return render_template('reports.html', report_data=report_data, chart_path=chart_path)
+
+    # Pass timestamp to force browser reload
+    timestamp = int(datetime.now().timestamp())
+    return render_template('reports.html', report_data=report_data, chart_path=chart_path, timestamp=timestamp)
 
 @app.route('/sales_orders')
 def sales_orders():
