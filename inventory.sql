@@ -174,21 +174,27 @@ INSERT INTO Items (item_name, description, category_id, supplier_id, unit_price,
 ('Linen Cloth', 'High-quality linen cloth', 1, 1, 800.00, 10),
 ('Cotton Fabric', 'Soft cotton fabric', 1, 2, 120.00, 5),
 ('Zips', 'Stainless Steel zippers', 1, 1, 2.50, 50),
-('Womens Navy Hyper Jersey', 'High-performance cycling jersey with a navy and lime design.', 3, 2, 1798.00, 10),
-('Womens Purple Hyper Jersey', 'Aerodynamic cycling jersey in purple with reflective accents.', 3, 2, 1798.00, 10),
-('Womens Coupure Shorts', 'Lightweight shorts designed for long-distance comfort.', 4, 2, 1798.00, 10),
-('Pink Nova Gloves', 'Stylish pink gloves with breathable fabric.', 5, 2, 1679.00, 10),
-('Kolisi Songo Jersey', 'Limited edition jersey supporting the Songo charity.', 3, 2, 1999.00, 10);
+('Womens Navy Hyper Jersey', 'High-performance cycling jersey with a navy and lime design', 3, 2, 1798.00, 10),
+('Womens Purple Hyper Jersey', 'Aerodynamic cycling jersey in purple with reflective accents', 3, 2, 1798.00, 10),
+('Womens Coupure Shorts', 'Lightweight shorts designed for long-distance comfort', 4, 2, 1798.00, 10),
+('Pink Nova Gloves', 'Stylish pink gloves with breathable fabric', 5, 2, 1679.00, 10),
+('Kolisi Songo Jersey', 'Limited edition jersey supporting the Songo charity', 3, 2, 1999.00, 10),
+('Mens Black Tourmalet Bib', 'High-performance mens bib shorts in Italian Lycra with Peloton pad', 2, 2, 3860.00, 5),
+('Mens Black Helmet', 'Protective helmet', 6, 2,  500.00 , 10),
+('VanH Running Belt', 'Minimalist running belt for phone, keys and cards', 7, 2,  299.99 , 10);
 
-INSERT INTO Stock (item_id, warehouse_id, quantity) VALUES
-(1, 1, 20),
-(2, 1, 15),
-(3, 2, 200),
+INSERT INTO Stock (item_id, warehouse_id, quantity) VALUES 
+(1, 1, 30),
+(2, 1, 30),
+(3, 2, 30),
 (4, 1, 8),
 (5, 1, 12),
 (6, 2, 5),
 (7, 2, 25),
-(8, 1, 10);
+(8, 1, 10),
+(9, 1, 12),
+(10, 1, 25),
+(11, 1, 18);
 
 INSERT INTO PurchaseOrders (supplier_id, order_date, status, expected_delivery_date) VALUES
 (1, '2025-10-01', 'Pending', '2025-10-10'),
