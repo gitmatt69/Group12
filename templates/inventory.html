@@ -17,8 +17,11 @@
 <div class="container mt-4 p-4">
 <h2 class="mb-4 text">
     <i class="bi bi-box-seam"></i> Inventory Overview</h2>
- <div class="row mb-4 mt-4">
 
+<!-- KPI Cards Row -->
+ <div class="row mb-4 mt-4">
+     
+<!-- Total inventory value card -->
   <div class="col-md-3">
     <div class="card text-center shadow-sm">
       <div class="card-body">
@@ -28,6 +31,7 @@
     </div>
   </div>
 
+<!-- Low-stock count card -->
   <div class="col-md-3">
     <div class="card text-center shadow-sm">
       <div class="card-body">
@@ -37,6 +41,7 @@
     </div>
   </div>
 
+<!-- Out-of-stock count card -->
   <div class="col-md-3">
     <div class="card text-center shadow-sm">
       <div class="card-body">
@@ -46,6 +51,7 @@
     </div>
   </div>
 
+<!-- Total units card -->    
   <div class="col-md-3">
     <div class="card text-center shadow-sm">
       <div class="card-body">
@@ -58,6 +64,8 @@
  </div>
 <!-- Search & Filter Form -->
 <form method="GET" action="{{ url_for('inventory') }}" class="row g-3 mb-4">
+
+<!-- Search bar -->
   <div class="col-md-4">
     <label for="searchInput" class="form-label" style="color: #0d6efd;">Search Inventory</label>
     <div class="input-group border rounded">
@@ -66,10 +74,12 @@
     </div>
   </div>
 
+<!-- Category filter -->
   <div class="col-md-3">
     <label for="categoryFilter" class="form-label" style="color: #0d6efd;">Category</label>
     <select class="form-select" name="category" id="categoryFilter">
       <option value="">All Categories</option>
+      <!-- Automatically selects the current filter values -->
       <option value="Bibs" {% if request.args.get('category') == 'Bibs' %}selected{% endif %}>Cycling Bibs</option>
       <option value="Jerseys" {% if request.args.get('category') == 'Jerseys' %}selected{% endif %}>Cycling Jerseys</option>
       <option value="Shorts" {% if request.args.get('category') == 'Shorts' %}selected{% endif %}>Cycling Shorts</option>
@@ -80,6 +90,7 @@
     </select>
   </div>
 
+  <!-- Stock status filter -->
   <div class="col-md-3">
     <label for="stockFilter" class="form-label" style="color: #0d6efd;">Stock Status</label>
     <select class="form-select" name="stock" id="stockFilter">
@@ -90,6 +101,7 @@
     </select>
   </div>
 
+  <!-- Filter button -->
   <div class="col-md-2">
     <label class="form-label">&nbsp;</label>
     <div class="d-grid">
