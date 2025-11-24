@@ -84,6 +84,8 @@
             <td>{{ order['item_name'] }}</td>
             <td>{{ order['quantity_ordered'] }}</td>
             <td>{{ order['order_date'] }}</td>
+
+            <!-- Status badge with mapped color -->
             <td><span class="badge {{ status_colors[order['status']] }}">{{ order['status'] }}</span></td>
             <td>{{ order['expected_delivery_date'] }}</td>
             <td>
