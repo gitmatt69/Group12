@@ -2,10 +2,10 @@
 This is a repository for a web-based application for the module BFB 321. This is the submission regarding the semester project for Group 12.
 
 ## Group members
-Matthew Taylor, u23739772  
-Daniël Johannes Voges, u23539519  
-Etienne Kros, u23628911  
-Chris-Dian Haasbroek, u05017158
+Matthew Taylor, u23739772 (Username: gitmatt69)  
+Daniël Johannes Voges, u23539519 (Username: NielVoges)  
+Etienne Kros, u23628911 (Username: gitet11)
+Chris-Dian Haasbroek, u05017158 (Username: hasiehaasbroek)
 
 ## Project Purpose
 The objective and purpose of this project is to improve VanH's operational efficiency by means of improving data commmunication and system visibility. This is achieved by constructing and implementing a web-based Sales and Operations Planning (S&OP) platform for the business to replace their current manual, paper-based data communication system. This platform will effectively execute various supply chain management functions such as centralised data communication, optimising order cycle times, comprehensive inventory tracking and improving overall prodcuction quality. 
