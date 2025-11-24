@@ -174,14 +174,14 @@ INSERT INTO Items (item_name, description, category_id, supplier_id, unit_price,
 ('Linen Cloth', 'High-quality linen cloth', 1, 1, 800.00, 10),
 ('Cotton Fabric', 'Soft cotton fabric', 1, 2, 120.00, 5),
 ('Zips', 'Stainless Steel zippers', 1, 1, 2.50, 50),
-('Womens Navy Hyper Jersey', 'High-performance cycling jersey with a navy and lime design', 3, 2, 1798.00, 10),
-('Womens Purple Hyper Jersey', 'Aerodynamic cycling jersey in purple with reflective accents', 3, 2, 1798.00, 10),
-('Womens Coupure Shorts', 'Lightweight shorts designed for long-distance comfort', 4, 2, 1798.00, 10),
-('Pink Nova Gloves', 'Stylish pink gloves with breathable fabric', 5, 2, 1679.00, 10),
-('Kolisi Songo Jersey', 'Limited edition jersey supporting the Songo charity', 3, 2, 1999.00, 10),
-('Mens Black Tourmalet Bib', 'High-performance mens bib shorts in Italian Lycra with Peloton pad', 2, 2, 3860.00, 5),
-('Mens Black Helmet', 'Protective helmet', 6, 2,  500.00 , 10),
-('VanH Running Belt', 'Minimalist running belt for phone, keys and cards', 7, 2,  299.99 , 10);
+('Womens Navy Hyper Jersey', 'High-performance cycling jersey with a navy and lime design', 3, NULL, 1798.00, 10),
+('Womens Purple Hyper Jersey', 'Aerodynamic cycling jersey in purple with reflective accents', 3, NULL, 1798.00, 10),
+('Womens Coupure Shorts', 'Lightweight shorts designed for long-distance comfort', 4, NULL, 1798.00, 10),
+('Pink Nova Gloves', 'Stylish pink gloves with breathable fabric', 5, NULL, 1679.00, 10),
+('Kolisi Songo Jersey', 'Limited edition jersey supporting the Songo charity', 3, NULL, 1999.00, 10),
+('Mens Black Tourmalet Bib', 'High-performance mens bib shorts in Italian Lycra with Peloton pad', 2, NULL, 3860.00, 5),
+('Mens Black Helmet', 'Protective helmet', 6, NULL,  500.00 , 10),
+('VanH Running Belt', 'Minimalist running belt for phone, keys and cards', 7, NULL,  299.99 , 10);
 
 INSERT INTO Stock (item_id, warehouse_id, quantity) VALUES 
 (1, 1, 30),
