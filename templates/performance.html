@@ -43,10 +43,15 @@
     <i class="bi bi-clipboard"></i> Sales Orders Summary</h2>
 <div class="mb-3">
   <a href="{{ url_for('add_sales_order') }}" class="btn btn-primary">
+
+    <!-- Add sales order button -->
     <i class="bi bi-plus-circle"></i> Add Sales Order</a>
 </div>
-<div class="row mb-4 mt-4">
 
+<!-- KPI cards -->
+<div class="row mb-4 mt-4">
+    
+  <!-- Total revenue -->
   <div class="col-md-3">
     <div class="card text-center shadow-sm">
       <div class="card-body">
@@ -55,7 +60,8 @@
       </div>
     </div>
   </div>
-
+    
+  <!-- Total items sold -->
   <div class="col-md-3">
     <div class="card text-center shadow-sm">
       <div class="card-body">
@@ -65,6 +71,7 @@
     </div>
   </div>
 
+  <!-- Total orders -->
   <div class="col-md-3">
     <div class="card text-center shadow-sm">
       <div class="card-body">
@@ -74,6 +81,7 @@
     </div>
   </div>
 
+  <!-- Average order value -->
   <div class="col-md-3">
     <div class="card text-center shadow-sm">
       <div class="card-body">
@@ -84,6 +92,8 @@
   </div>
 
  </div>
+
+<!-- Sales orders table -->
 <table class="table table-striped table-hover">
     <thead class="table-dark">
         <tr>
@@ -99,12 +109,17 @@
     <tbody>
         {% for row in sales_summary %}
         <tr>
+            <!-- Order details -->
             <td>{{ row['so_id'] }}</td>
             <td>{{ row['customer_name'] }}</td>
             <td>{{ row['order_date'] }}</td>
+
+            <!-- Status badge with fallback style -->
             <td><span class="badge {{ status_colors.get(row['status'], 'bg-secondary') }}">{{ row['status'] }}</span></td>
             <td>{{ row['total_items'] }}</td>
             <td>{{ row['total_value'] | round(2) }}</td>
+
+            <!-- Edit & delete actions -->
             <td>
               <div class="d-flex gap-1">
                 <a href="/sales_orders/edit/{{ row['so_id'] }}" class="btn btn-sm btn-primary me-1">
