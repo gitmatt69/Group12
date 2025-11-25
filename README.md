@@ -58,7 +58,7 @@ The project has tables for customers, sales orders and sales order details to en
 - __2 Suppliers__: TechSupplies Inc. and FurniCo.  
 - __2 Customers__: Acme Corp. and Beta LLC.  
 - __2 Warehouses__: Main Warehouse and Secondary Warehouse.  
-- __8 Items__: Linen Cloth, Cotton Fabric, Zips, Womens Navy Hyper Jersey, Womens Purple Hyper Jersey, Womens Coupure Shorts, Pink Nova Gloves, Kolisi Songo Jersey.  
+- __11 Items__: Linen Cloth, Cotton Fabric, Zips, Womens Navy Hyper Jersey, Womens Purple Hyper Jersey, Womens Coupure Shorts, Pink Nova Gloves, Kolisi Songo Jersey, Mens Black Tourmalet Bib, Mens Black Helmet, VanH Running Belt.  
   
 We also created two purchase orders linked to their details, and did the same for ten sales orders. Additionally, we inserted two users and three stock movement transactions.
 
@@ -101,15 +101,17 @@ To download Flask, type in the terminal:
 pip install Flask
 ```
 ### Step 3: Initialise the database
+First you should try Step 4. If that does not work, come back to Step 3. 
 Open the inventory.sql file in VS Code. Then do the following: 
-Press Ctrl Shift P and select the following (Ensure no code is highlighted so all the tables are created and all data is inserted)
-```
-SQLite: Run Query
-```
-OR open a terminal/command prompt and run the following:
+Open a terminal/command prompt and run the following:
 ```
 sqlite3 inventory.db < inventory.sql
 ```
+OR Press Ctrl Shift P and select the following (Ensure no code is highlighted so all the tables are created and all data is inserted)
+```
+SQLite: Run Query
+```
+Select inventory.db. 
 You should now have a working database!   
 If you do not have a working database, please follow these steps. We discovered during testing that uploading the empty inventory.db file sometimes makes the .sql file run with errors. If this happens, ensure that the web app is closed and delete the inventory.db file. Then, make a new inventory.db file, and run the inventory.sql file again as per the previous steps. You may also need to close and reopen VS Code. 
 ### Step 4: Running the app
@@ -133,3 +135,10 @@ http://127.0.0.1:5000
 ## Technology Stack
 Front-end: HTML5, CSS and Bootstrap   
 Back-end: Python (Flask framework) for logic and SQLite for the database. 
+
+## Task Allocation 
+Matthew Taylor: Back-end routes & CRUD functionality, database, and initial front-end templates 
+Daniël Johannes Voges: Front-end final build/aesthetics, back-end routes  
+Etienne Kros: Front-end final build/aesthetics, readability of code, quality control
+Chris-Dian Haasbroek: Front-end final build/aesthetics, readability of code, quality control
+
