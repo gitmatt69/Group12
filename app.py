@@ -310,8 +310,6 @@ def delete_order(po_id):
     flash("Purchase order deleted successfully!", "success")
     return redirect(url_for('orders'))
 
-from datetime import datetime
-
 @app.route('/reports')
 def reports():
     conn = get_db_connection()
