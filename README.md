@@ -137,8 +137,8 @@ Front-end: HTML5, CSS and Bootstrap
 Back-end: Python (Flask framework) for logic and SQLite for the database. 
 
 ## Task Allocation 
-Matthew Taylor: Back-end routes & CRUD functionality, database, and initial front-end templates 
-Daniël Johannes Voges: Front-end final build/aesthetics, back-end routes  
-Etienne Kros: Front-end final build/aesthetics, readability of code, quality control
+Matthew Taylor: Back-end routes & CRUD functionality, database, and initial front-end templates   
+Daniël Johannes Voges: Front-end final build/aesthetics, back-end routes    
+Etienne Kros: Front-end final build/aesthetics, readability of code, quality control   
 Chris-Dian Haasbroek: Front-end final build/aesthetics, readability of code, quality control
 
