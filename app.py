@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session, send_file
 import sqlite3
 import matplotlib.pyplot as plt
-from datetime import date
+from datetime import datetime
 import os
 import matplotlib.patches as patches
 DATABASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'inventory.db')
