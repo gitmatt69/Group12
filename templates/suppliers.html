@@ -17,6 +17,7 @@
 <table class="table table-striped table-hover"> 
   <thead class="table-dark">
     <tr>
+      
       <th>ID</th>
       <th>Name</th>
       <th>Contact</th>
@@ -30,6 +31,8 @@
     <!-- Loop through supplier records -->
     {% for supplier in suppliers %}
     <tr>
+
+      <!-- Supplier basic details -->
       <td>{{ supplier['supplier_id'] }}</td>
       <td>{{ supplier['supplier_name'] }}</td>
       <td>{{ supplier['contact_person'] }}</td>
