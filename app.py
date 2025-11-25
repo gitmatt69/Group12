@@ -300,10 +300,8 @@ def edit_order(po_id):
 def delete_order(po_id):
     conn = get_db_connection()
     
-    # Delete line items first (foreign key dependency)
     conn.execute("DELETE FROM PurchaseOrderDetails WHERE po_id = ?", (po_id,))
     
-    # Delete order header
     conn.execute("DELETE FROM PurchaseOrders WHERE po_id = ?", (po_id,))
     
     conn.commit()
@@ -357,8 +355,6 @@ def reports():
     chart_path = os.path.join('static', 'reports_stock_chart.png')
     plt.savefig(chart_path)
     plt.close()
-
-    # Pass timestamp to force browser reload
     timestamp = int(datetime.now().timestamp())
     return render_template('reports.html', report_data=report_data, chart_path=chart_path, timestamp=timestamp)
 
