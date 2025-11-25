@@ -2,9 +2,12 @@
 {% block title %}Suppliers{% endblock %}
 {% block content %}
 <div class="container mt-4 p-4">
+
+<!-- Page header -->
 <h2 class="mb-4 text">
   <i class="bi bi-people"></i> Suppliers Dashboard</h2>
 
+<!-- Button to add a new supplier -->
 <div class="mb-3">
   <a href="{{ url_for('add_supplier') }}" class="btn btn-primary mb-3">
     <i class="bi bi-plus-circle"></i> Add New Supplier</a>
